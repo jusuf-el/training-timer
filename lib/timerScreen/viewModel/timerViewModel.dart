@@ -39,6 +39,8 @@ class TimerViewModel {
     }
   }
 
+  //Main method of the app. The most important logic is in this method which
+  //defines the count down process.
   startTimer() {
     Get.find<TrainingController>().icon.value = Icons.pause;
     Get.find<TrainingController>().timer =
@@ -125,6 +127,8 @@ class TimerViewModel {
             //training interval duration, break interval duration, trainnig interval duration...)
             //is emppty, then timer stop and training session is completed.
             Get.find<TrainingController>().icon.value = Icons.play_arrow;
+            Get.find<TrainingController>().stateIndicator.value =
+                Texts.finish.toUpperCase();
             Get.defaultDialog(
               backgroundColor: colors.Colors.darkGrey,
               title: Texts.congratulations.toUpperCase(),

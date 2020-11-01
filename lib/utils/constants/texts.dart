@@ -61,4 +61,5 @@ class Texts {
   static const String congratulations = 'Congratulations';
   static const String youHaveCompletedTraining =
       'You have completed your training session. Now you will be redirected to Training Parameters screen from where you can start your new session.';
+  static const String finish = 'Finish';
 }
